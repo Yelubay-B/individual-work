@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - Individual Work</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Counter -->
+        <div class="form-section">
+            <h2>Counter</h2>
+            <p class="info-text">Value: <span id="counterDisplay">0</span></p>
+            <div style="display: flex; gap: 10px;">
+                <button id="incBtn" class="btn-primary">Increase</button>
+                <button id="decBtn" class="btn-secondary">Decrease</button>
+                <button id="resetBtn" class="btn-danger">Reset</button>
+            </div>
+        </div>
+
+        <!-- Live Text Preview -->
+        <div class="form-section">
+            <h2>Live Text Preview</h2>
+            <div class="input-group">
+                <label for="liveInput">Enter Text:</label>
+                <input type="text" id="liveInput" placeholder="Type something...">
+            </div>
+            <p class="info-text">Preview: <span id="previewText">Your text will appear here</span></p>
+            <p class="info-text">Character Count: <span id="charCount">0</span></p>
+            <button id="clearBtn" class="btn-secondary">Clear</button>
+        </div>
+
+        <!-- Image Selector -->
+        <div class="form-section">
+            <h2>Image Selector</h2>
+            <div class="input-group">
+                <label for="imageSelect">Select Image:</label>
+                <select id="imageSelect">
+                    <option value="img1">Picture 1</option>
+                    <option value="img2">Picture 2</option>
+                    <option value="img3">Picture 3</option>
+                </select>
+            </div>
+            <div style="margin-top: 15px; text-align: center;">
+                <img id="displayImage" src="https://media.istockphoto.com/id/2181735944/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B3%D0%BE%D1%80%D0%BD%D1%8B%D0%B5-%D0%BB%D0%B0%D0%BD%D0%B4%D1%88%D0%B0%D1%84%D1%82%D1%8B.jpg?s=612x612&w=0&k=20&c=2UXbInhORAWma4x_V0g1bF-_-1Mln-NwLMqBYmk5bxE=" alt="First picture description" width="220" style="border-radius: 6px; border: 1px solid #ccc;">
+                <p id="imageCaption" class="info-text" style="margin-top: 8px; font-weight: bold;">Description of the first picture</p>
+            </div>
+        </div>
+
+        <!-- Keyboard Events -->
+        <div class="form-section">
+            <h2>Keyboard Events</h2>
+            <div class="input-group">
+                <label for="keyInput">Type here (Press Enter or Escape):</label>
+                <input type="text" id="keyInput" placeholder="Press keys...">
+            </div>
+            <p id="keyStatus" class="info-text"></p>
+            <p class="info-text">Result (on Enter): <span id="keyResult" style="font-weight: bold;"></span></p>
+        </div>
+
+        <!-- Mouse and Focus Events -->
+        <div class="form-section">
+            <h2>Mouse & Focus Events</h2>
+            <div id="focusCard" tabindex="0" style="border: 2px dashed #2e7d32; padding: 20px; border-radius: 6px; background: #fafafa; cursor: pointer; outline: none;">
+                Hover your mouse over this card or focus on it using the Tab key.
+            </div>
+            <p id="instructionText" class="info-text" style="margin-top: 10px;">Status: Waiting...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
